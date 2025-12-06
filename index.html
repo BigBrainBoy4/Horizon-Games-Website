@@ -23,61 +23,57 @@
         }
 
         hr {
-            border-color: orange;
+            border: 5px solid orange;
         }
 
-        summary {
-            font-size: 30px;
-        }
-
-        .spacing {
-            height: 20px;
-        }
-
-        .btn {
+        .download {
             background-color: red;
             color: black;
-            width: 200px;
-            height: 75px;
-            text-align: cen;
+            width: 150px;
+            height: 50px;
+            text-align: center;
             border-radius: 5%;
             cursor: pointer;
-        }
-
-        #subTitle {
-            text-align: center;
-            font-size: 50px;
+            padding-bottom: 55px; /*75px is for the 'windows download'*/
         }
 
         .horizon-color {
-            color :darkviolet;
+            color:rgb(255, 0, 179)
         }
 
         .game-color {
             color: rgb(0, 255, 0);
+        }
+        
+        .game-border {
+            border: 5px solid yellow;
+            padding: 10px;
+        }
+        
+        #games {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
     </style>
 </head>
 <body>    
     <h1><span class="horizon-color">Horizon</span> <span class="game-color">Games</span></h1>
     <hr>
-    <details>
-        <summary><b>The Seven Seas</b></summary>
-        <hr>
-        <a href="https://github.com/BigBrainBoy4/My-Games/releases/download/ver-1/The.Seven.Seas.zip" target="_blank"><button class="btn"><h2>Download</h2></button></a>
-        <h2>Patch Notes:</h2>
-        <ul>
-            <li>11/30/2025: Offical Beta Release</li>
-        </ul>
-        <hr>
-    </details>
-    <div class="spacing"></div>
-    <details>
-        <summary><b>Friendly Fire</b></summary>
-        <hr>
-            <h2>Coming Soon...</h2>
-        <hr>
-    </details> 
+    <div id="games">
+        <div class="game-border">
+            <h2>The Seven Seas</h2>
+            <a href="https://github.com/BigBrainBoy4/My-Games/releases/download/ver-1/The.Seven.Seas.zip" target="_blank"><button class="download"><h2><!---Windows--> Download</h2></button></a>
+            <!-- <a href="" target="_blank"><button class="download"><h2>Mac Download</h2></button></a> add one day maybe -->
+            <h2>Patch Notes:</h2>
+            <ul>
+                <li>11/30/2025: Offical Beta Release</li>
+            </ul>
+        </div>
+        <div class="game-border">
+            <h2>Friendly Fire</h2>
+            <h3>Coming Soon...</h3>
+        </div>
+    </div>
     <h4><a href="https://github.com/BigBrainBoy4/My-Games" target="_blank">Report Issues</a></h4>
 </body>
 </html>
